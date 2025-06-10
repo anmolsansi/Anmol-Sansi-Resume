@@ -66,6 +66,7 @@ function App() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-h-full">
               <TopNav />
               <div className="mt-9 px-10">
+
                 <Routes>
                   <Route path="/" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
