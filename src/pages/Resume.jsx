@@ -43,6 +43,8 @@ const Resume = () => {
               </p>
             </div>
           </div>
+          <br/>
+          <br/>
           <div className="space-y-6">
             <div>
               <h4 className="text-lg font-bold text-gray-900 dark:text-white">
