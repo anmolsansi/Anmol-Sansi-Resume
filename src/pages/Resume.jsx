@@ -65,12 +65,19 @@ const Resume = () => {
           </h3>
           <div className="space-y-6">
             {[
+      {
+  title: 'Full Stack Engineer',
+  company: 'Alphadroid US',
+  duration: 'May 2025 – Present',
+  details:
+          'Built a multilingual, AI-powered assistant using React, NestJS, Python, and ChatGPT to streamline patient intake and hotel operations, cutting intake time by 30% and supporting 5+ languages. Designed scalable APIs with PostgreSQL and OpenAI for real-time guest interactions, boosting automation and backend efficiency.'
+      },
               {
   title: 'Software Engineer Intern',
-  company: 'Radical AI',
+  company: 'Reality AI',
   duration: 'Aug 2024 – Feb 2025',
   details:
-    'Developed AI-driven tools for flight and quiz management using Google Gemini and NLP. Improved user engagement and search relevance by 20% through real-time interaction platforms and intelligent query handling.',
+    'Developed AI-driven tools for quiz management using Google Gemini and NLP. Improved user engagement and search relevance by 20% through real-time interaction platforms and intelligent query handling.',
 },
 {
   title: 'Teaching Assistant (Java)',
