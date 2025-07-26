@@ -49,7 +49,7 @@ const Resume = () => {
               <h4 className="text-lg font-bold text-gray-900 dark:text-white">
                 Delhi Technological University
               </h4>
-              <span className="text-sm text-gray-500 dark:text-gray-400">2023 – 2024</span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">2015 – 2019</span>
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
                 Bachelors of Technology in Electronics and Communication Engineering<br />
               </p>
