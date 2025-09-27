@@ -144,7 +144,7 @@ const Resume = () => {
 
       <div className="text-right mt-16 mb-16">
   <a
-    href="/Anmol_Sansi_CV.pdf"
+    href={process.env.PUBLIC_URL + '/Anmol_Sansi_CV.pdf'}
     download
     className="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
   >
