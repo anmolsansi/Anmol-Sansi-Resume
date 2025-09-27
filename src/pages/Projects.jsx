@@ -76,14 +76,14 @@ const Projects = () => {
 
             {/* Actions */}
             <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href={p.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
-              >
-                <FaGithub /> GitHub
-              </a>
+{/*               <a */}
+{/*                 href={p.github} */}
+{/*                 target="_blank" */}
+{/*                 rel="noopener noreferrer" */}
+{/*                 className="inline-flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700" */}
+{/*               > */}
+{/*                 <FaGithub /> GitHub */}
+{/*               </a> */}
               {/* If you have a live demo later, add it like this:
               <a
                 href="https://your-demo-url"
