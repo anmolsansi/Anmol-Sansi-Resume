@@ -5,7 +5,7 @@ import { FaGraduationCap, FaBriefcase, FaTools } from 'react-icons/fa';
 const skills = [
   { name: 'Python', level: 90 },
   { name: 'Java', level: 85 },
-  { name: 'AWS', level: 85 },
+  { name: 'Amazon Web Services (AWS)', level: 85 },
   { name: 'JavaScript', level: 80 },
   { name: 'NodeJS', level: 70 },
   { name: 'React', level: 75 },
