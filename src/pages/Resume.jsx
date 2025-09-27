@@ -73,11 +73,11 @@ const Resume = () => {
           'Built a multilingual, AI-powered assistant using React, NestJS, Python, and ChatGPT to streamline patient intake and hotel operations, cutting intake time by 30% and supporting 5+ languages. Designed scalable APIs with PostgreSQL and OpenAI for real-time guest interactions, boosting automation and backend efficiency.'
       },
               {
-  title: 'Software Engineer Intern',
-  company: 'Reality AI',
-  duration: 'Aug 2024 – Feb 2025',
+  title: 'Software Engineer II',
+  company: 'AI.Rawat',
+  duration: 'Aug 2024 – Apr 2025',
   details:
-    'Developed AI-driven tools for quiz management using Google Gemini and NLP. Improved user engagement and search relevance by 20% through real-time interaction platforms and intelligent query handling.',
+  'Delivered a real-time analytics platform unifying data from 5+ e-commerce sources, cutting stock-out risks by 25% and improving inventory turnover by 15%. Led AI-driven enhancements in Moodle LMS that boosted academic outcomes by 20% and feedback quality by 30%, while mentoring junior engineers and driving production-ready solutions end-to-end.'
 },
 {
   title: 'Teaching Assistant (Java)',
