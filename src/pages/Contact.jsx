@@ -1,64 +1,8 @@
 import React from 'react';
+import PageHero from '../components/PageHero';
+import Icon from '../components/Icon';
+import { profile } from '../data';
 
-const Contact = () => {
-  return (
-    <div className="max-w-4xl mx-auto mt-6">
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-yellow-400 inline-block pb-1">Contact</h2>
-        <br></br>
-        <br></br>
-        <form
-          action="https://formspree.io/f/xblygpjg"  // 🔁 Replace this with your actual Formspree endpoint
-          method="POST"
-          className="space-y-6"
-        >
-          <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex-1">
-              <label className="block mb-1 text-sm font-medium" htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-            <div className="flex-1">
-              <label className="block mb-1 text-sm font-medium" htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block mb-1 text-sm font-medium" htmlFor="message">Your Message</label>
-            <textarea
-              name="message"
-              id="message"
-              rows="5"
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            ></textarea>
-          </div>
-
-          {/* Optional: Redirect after submit */}
-          {/* <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you" /> */}
-
-          <button
-            type="submit"
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm rounded-lg shadow-md transition duration-200"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-};
-
-export default Contact;
+export default function Contact() {
+  return <><PageHero eyebrow="Let's Connect" title="Let's connect and build something" accent="great." description="I'm open to new opportunities, collaborations, and impactful projects. Whether you have a question or just want to say hi, I'd love to hear from you!"/><section className="container contact-grid"><article className="info-card"><h2><Icon name="mail"/> Send a Message</h2><form action="https://formspree.io/f/xblygpjg" method="POST"><div className="field-row"><label>Full Name<input name="name" placeholder="Your name" required/></label><label>Email Address<input name="email" type="email" placeholder="you@example.com" required/></label></div><label>Company (Optional)<input name="company" placeholder="Your company name"/></label><label>Project / Message<textarea name="message" rows="6" placeholder="Tell me about your project or opportunity..." required/></label><button className="button" type="submit"><Icon name="arrow"/> Send Message</button></form></article><aside className="info-card contact-details"><h2><Icon name="user"/> Contact Details</h2><p>Feel free to reach out through any of these channels.</p>{[['Email', profile.email, `mailto:${profile.email}`, 'mail'], ['LinkedIn', 'linkedin.com/in/anmol-sansi', profile.linkedin, 'user'], ['GitHub', 'github.com/anmolsansi', profile.github, 'github'], ['Location', profile.location, null, 'pin']].map(([label,value,href,icon]) => <div className="contact-item" key={label}><span className="round-icon"><Icon name={icon}/></span><p><small>{label}</small>{href ? <a href={href}>{value}</a> : <strong>{value}</strong>}</p></div>)}<a className="button button-outline wide" href={process.env.PUBLIC_URL + '/Anmol_Sansi_CV.pdf'} download><Icon name="download"/> Download Resume</a></aside></section><section className="container cta"><div className="cta-icon"><Icon name="mail"/></div><div><h2>Ready to build something meaningful?</h2><p>Available for full-time product engineering opportunities.</p></div><a className="button" href={`mailto:${profile.email}`}>Start a Conversation <Icon name="arrow"/></a></section></>;
+}
