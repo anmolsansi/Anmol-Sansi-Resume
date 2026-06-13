@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Anmol-Sansi-Resume/static/css/main.cd4537da.css",
-    "main.js": "/Anmol-Sansi-Resume/static/js/main.c2a573ac.js",
+    "main.css": "/Anmol-Sansi-Resume/static/css/main.e2246ba2.css",
+    "main.js": "/Anmol-Sansi-Resume/static/js/main.37638fbe.js",
     "static/media/profile.jpeg": "/Anmol-Sansi-Resume/static/media/profile.60a550d687b33f0decc0.jpeg",
     "index.html": "/Anmol-Sansi-Resume/index.html",
-    "main.cd4537da.css.map": "/Anmol-Sansi-Resume/static/css/main.cd4537da.css.map",
-    "main.c2a573ac.js.map": "/Anmol-Sansi-Resume/static/js/main.c2a573ac.js.map"
+    "main.e2246ba2.css.map": "/Anmol-Sansi-Resume/static/css/main.e2246ba2.css.map",
+    "main.37638fbe.js.map": "/Anmol-Sansi-Resume/static/js/main.37638fbe.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd4537da.css",
-    "static/js/main.c2a573ac.js"
+    "static/css/main.e2246ba2.css",
+    "static/js/main.37638fbe.js"
   ]
 }
