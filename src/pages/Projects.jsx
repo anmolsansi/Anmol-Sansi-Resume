@@ -3,7 +3,7 @@ import PageHero from '../components/PageHero';
 import { ProjectCard } from './Home';
 import { projects } from '../data';
 
-const filters = ['All Projects', 'AI / ML', 'Full Stack', 'Cloud', 'Automation', 'Analytics'];
+const filters = ['All Projects', 'AI / ML', 'Full Stack', 'Cloud & Data', 'Automation', 'Analytics'];
 export default function Projects() {
   const [filter, setFilter] = useState(filters[0]);
   const visible = filter === filters[0] ? projects : projects.filter(p => p.category === filter);

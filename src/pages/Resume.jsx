@@ -1,8 +1,77 @@
 import React from 'react';
-import PageHero from '../components/PageHero';
 import Icon from '../components/Icon';
-import { experiences, profile, skillGroups } from '../data';
+import { education, experiences, profile, resumeSummary, skillGroups } from '../data';
 
 export default function Resume() {
-  return <><PageHero eyebrow="Career Profile" title="Resume" description="Results-driven engineer building scalable backend systems, cloud infrastructure, and AI-powered products that solve real-world problems."><div className="contact-inline"><span><Icon name="pin" size={17}/>{profile.location}</span><span><Icon name="mail" size={17}/>{profile.email}</span></div><div className="button-row"><a className="button" href={process.env.PUBLIC_URL + '/Anmol_Sansi_CV.pdf'} download>Download PDF Resume <Icon name="download"/></a><a className="button button-outline" href={profile.linkedin}>View LinkedIn <Icon name="arrow"/></a></div></PageHero><section className="container resume-grid"><article className="info-card"><h2><Icon name="user"/> Summary</h2><p>Full Stack and AI Software Engineer with 4+ years of experience building production-grade systems across fintech, analytics, and AI products. Experienced in end-to-end ownership from system design and data modeling to deployment, observability, and incident response.</p><ul><li>Scalable APIs, real-time pipelines, and distributed systems.</li><li>Cloud delivery with AWS, Docker, Kubernetes, and microservices.</li><li>Applied AI products using OpenAI, RAG, and intelligent workflows.</li></ul></article><article className="info-card"><h2><Icon name="code"/> Core Skills</h2>{skillGroups.map(([name, ...items]) => <div className="resume-skill" key={name}><strong>{name}</strong><div className="tags">{items.map(i => <span key={i}>{i}</span>)}</div></div>)}</article><article className="info-card resume-experience"><h2><Icon name="briefcase"/> Experience Highlights</h2>{experiences.map(job => <div className="resume-job" key={job.company}><span className="company-mark">{job.mark}</span><div><h3>{job.company}</h3><strong>{job.role}</strong><small>{job.dates}</small><p>{job.bullets[0]}</p></div></div>)}</article><div className="resume-side"><article className="info-card"><h2>Education</h2><div className="education"><strong>Illinois Institute of Technology</strong><span>Master's in Information Technology and Management</span><small>2024 • Chicago, IL</small></div><div className="education"><strong>Delhi Technological University</strong><span>Bachelor of Technology, Engineering</span><small>2019 • Delhi, India</small></div></article><article className="info-card"><h2>Key Achievements</h2><div className="impact-grid"><span><strong>99.9%</strong>Uptime</span><span><strong>1M+</strong>Daily records</span><span><strong>50%</strong>Performance gain</span><span><strong>15%</strong>Cost reduction</span></div></article></div></section></>;
+  return (
+    <>
+      <section className="container resume-heading">
+        <div>
+          <span className="eyebrow">Latest Resume</span>
+          <h1>{profile.name}</h1>
+          <h2>{profile.title} <span>| {profile.tagline}</span></h2>
+          <div className="resume-contact">
+            <span><Icon name="pin" size={16}/>{profile.location}</span>
+            <span><Icon name="user" size={16}/>{profile.phone}</span>
+            <span>{profile.relocation}</span>
+            <a href={profile.linkedin}>LinkedIn</a>
+            <a href={profile.website}>Website</a>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </div>
+        </div>
+        <a className="button" href={process.env.PUBLIC_URL + '/Anmol_Sansi_CV.pdf'} download>
+          Download PDF <Icon name="download"/>
+        </a>
+      </section>
+
+      <section className="container resume-document">
+        <ResumeSection title="Summary" icon="user">
+          <p className="resume-summary">{resumeSummary}</p>
+        </ResumeSection>
+
+        <ResumeSection title="Skills" icon="code">
+          <div className="resume-skill-list">
+            {skillGroups.map(([name, ...items]) => (
+              <div className="resume-skill" key={name}>
+                <strong>{name}</strong>
+                <p>{items.join(', ')}</p>
+              </div>
+            ))}
+          </div>
+        </ResumeSection>
+
+        <ResumeSection title="Work Experience" icon="briefcase">
+          <div className="resume-work-list">
+            {experiences.map(job => (
+              <article className="resume-full-job" key={job.company}>
+                <header>
+                  <div>
+                    <h3>{job.role} - {job.company}</h3>
+                    <span>{job.location}</span>
+                  </div>
+                  <strong>{job.dates}</strong>
+                </header>
+                <ul>{job.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul>
+              </article>
+            ))}
+          </div>
+        </ResumeSection>
+
+        <ResumeSection title="Education" icon="star">
+          <div className="resume-education-list">
+            {education.map(item => (
+              <article key={item.school}>
+                <div><h3>{item.school}</h3><p>{item.degree}</p></div>
+                <strong>{item.year}</strong>
+              </article>
+            ))}
+          </div>
+        </ResumeSection>
+      </section>
+    </>
+  );
+}
+
+function ResumeSection({ title, icon, children }) {
+  return <article className="resume-section"><h2><Icon name={icon}/>{title}</h2>{children}</article>;
 }

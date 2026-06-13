@@ -48,7 +48,7 @@ const Sidebar = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <HiOutlineLocationMarker className="text-blue-500" />
-            <span>Chicago, IL</span>
+            <span>San Francisco, CA</span>
           </div>
         </div>
       </div>

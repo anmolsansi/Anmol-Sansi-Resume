@@ -11,7 +11,7 @@ const stack = ['Python', 'TypeScript', 'Java', 'React', 'FastAPI', 'AWS', 'Postg
 export default function Home() {
   return <>
     <section className="home-hero container">
-      <div className="hero-copy"><span className="eyebrow">Backend • Cloud • Applied AI</span><h1>Building scalable software, cloud systems, and <span>AI-powered</span> products.</h1><p>Full Stack Software Engineer with 4+ years of experience delivering reliable backend systems, cloud infrastructure, and AI applications that create measurable impact.</p><div className="button-row"><Link className="button" to="/projects">View Projects <Icon name="arrow" /></Link><Link className="button button-outline" to="/contact"><Icon name="mail" /> Contact Me</Link></div><div className="tech-strip">{stack.map(item => <span key={item}>{item}</span>)}</div></div>
+      <div className="hero-copy"><span className="eyebrow">Backend • Cloud • Applied AI</span><h1>Building scalable software, cloud systems, and <span>AI-powered</span> products.</h1><p>Full Stack Software Engineer with 5+ years of experience delivering reliable backend systems, cloud infrastructure, and AI applications that create measurable impact.</p><div className="button-row"><Link className="button" to="/projects">View Projects <Icon name="arrow" /></Link><Link className="button button-outline" to="/contact"><Icon name="mail" /> Contact Me</Link></div><div className="tech-strip">{stack.map(item => <span key={item}>{item}</span>)}</div></div>
       <BrandOrb />
     </section>
     <section className="container stats-grid">{stats.map(([number, label, icon]) => <div className="stat" key={label}><Icon name={icon} size={32}/><strong>{number}</strong><span>{label}</span></div>)}</section>
