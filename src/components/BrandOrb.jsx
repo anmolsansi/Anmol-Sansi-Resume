@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon';
+import profileImage from '../assets/profile.jpeg';
 
 export default function BrandOrb({ variant = 'initials' }) {
   return (
@@ -9,7 +10,9 @@ export default function BrandOrb({ variant = 'initials' }) {
       <span className="orbit-dot dot-one" />
       <span className="orbit-dot dot-two" />
       <span className="orbit-dot dot-three" />
-      <div className="orb-main">{variant === 'code' ? <Icon name="code" size={64} /> : 'AS'}</div>
+      <div className={variant === 'code' ? 'orb-main' : 'orb-main orb-photo'}>
+        {variant === 'code' ? <Icon name="code" size={64} /> : <img src={profileImage} alt="" />}
+      </div>
       <div className="float-icon float-code"><Icon name="code" /></div>
       <div className="float-icon float-cloud"><Icon name="cloud" /></div>
       <div className="float-icon float-data"><Icon name="database" /></div>
